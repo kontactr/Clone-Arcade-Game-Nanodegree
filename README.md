@@ -18,7 +18,7 @@ For this project, I am using udacity starter code. which includes animation loop
 * User can use (up, down, left, right) arrow keys
 * with the help of arrow keys user have to cross the road
 * there are some bugs on the road which user has to avoid
-* there are initially 3 lives are given
+* there are additional 3 lives are given
 * if the user collides with the bugs:
      1) decrease the life by 1
      2) if no life is remaining then game restarts

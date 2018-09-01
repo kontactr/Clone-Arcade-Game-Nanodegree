@@ -1,3 +1,4 @@
+// All characters images are here
 var characterImagesList = [
     'images/char-boy.png',
     'images/char-cat-girl.png',
@@ -7,6 +8,7 @@ var characterImagesList = [
 ];
 
 
+// All gems images are here
 var gemsImageList = [
     'images/star.png',
     'images/Key.png',
@@ -14,6 +16,7 @@ var gemsImageList = [
     'images/gem-green.png',
     'images/gem-orange.png',
 ];
+
 
 
 var characterImageNode = document.getElementById("character-image");
@@ -77,7 +80,8 @@ Enemy.prototype.render = function () {
 
 
 
-var BounsObjects = function (xAxis, yAxis) {
+// BonusObjects Constructor function
+var BounsObjects = function (xAxis = undefined, yAxis = undefined) {
 
     this.xAxis = xAxis;
     this.yAxis = yAxis;
@@ -87,6 +91,9 @@ var BounsObjects = function (xAxis, yAxis) {
     this.prevScore = -1;
 }
 
+// Bonusobjects render on the screen on the multiply of the 3 score
+// and stays untill user will collect or change the position when the
+// user hits another multiply of 3s score
 BounsObjects.prototype.render = function () {
 
 
@@ -110,8 +117,6 @@ BounsObjects.prototype.render = function () {
         }
     }
 
-
-
     if (!this.starOccupied) {
         //console.log("star")
         ctx.drawImage(Resources.get(this.sprite), this.xAxis, this.yAxis);
@@ -119,7 +124,7 @@ BounsObjects.prototype.render = function () {
 
 }
 
-
+//Bonusobject is created
 var bounsObjects = new BounsObjects();
 
 
@@ -148,7 +153,9 @@ var Player = function (xAxis, yAxix) {
 };
 
 
-
+//player update function only checks
+//whether user collects the bonusobjects or
+//collides with the bugs
 Player.prototype.update = function (dt) {
 
     if (this.playerVerticlePositionIndex === this.downUpPositionsLength) {
@@ -261,12 +268,14 @@ document.addEventListener('keyup', function (e) {
 
 
 
-//MDN Refrences
+//MDN source
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+
+//Character changes event
 document.getElementById("character").addEventListener("click", function () {
 
     characterImagesListIndex += 1;
@@ -281,6 +290,8 @@ document.getElementById("character").addEventListener("click", function () {
 
 });
 
+
+//bonusobjects changes event
 document.getElementById("gems").addEventListener("click", function () {
 
     gemsImageListIndex += 1;
@@ -297,6 +308,7 @@ document.getElementById("gems").addEventListener("click", function () {
 });
 
 
+//buylife event handlers
 document.getElementById("buy-life").addEventListener("click", function () {
 
     if (player.stars >= 5) {
@@ -315,6 +327,8 @@ document.getElementById("buy-life").addEventListener("click", function () {
 });
 
 
+//check whether user and bugs have same position or not
+//ranges are  ( 65 <- player -> 60  )
 function checkCollisions() {
 
     for (const enemy of allEnemies)
@@ -330,9 +344,7 @@ function checkCollisions() {
             ) {
 
 
-
                 if (player.life === 0) {
-
 
                     console.log(enemy);
                     player.x = 200;
@@ -368,4 +380,3 @@ function checkCollisions() {
     }
 
 }
-
