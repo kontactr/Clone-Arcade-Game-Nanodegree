@@ -1,6 +1,45 @@
-frontend-nanodegree-arcade-game
-===============================
+# Classic Arcade Game Clone
+* [Udacity Front-End Nanodegree](https://in.udacity.com/course/front-end-web-developer-nanodegree--nd001) Project
+* important notes
+* how to play
+* For contribution
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+# Important notes
+
+For this project i am using udacity starter code. which includes animation loop , starter game engine code , starter html and CSS code and resource cached code.
+
+
+# How to Play
+
+
+### Main Game Screen
+
+* User can use (up , down , left ,right) arrow keys
+* with the help of arrow keys user have to cross the road
+* there are some bugs on the road which user have to avoid
+* there are initially 3 life are given
+* if the user collide with the bugs:
+     1) decrease the life by 1
+     2) if no life is remaining then game restarts
+* user can purchase the extra life using collectives (5 collectives per life)
+
+### Scoring
+
+* 1-point : cross the river
+* 1-collective : collect one object
+
+
+# For Contribution
+
+### Key concepts
+
+* flex display property
+* event handling using (JS)
+* responsive design
+* rendering using canvas 
+* object oriented js 
+
+### For Markdown
+
+* [markdown-code editor](https://jbt.github.io/markdown-editor/)
