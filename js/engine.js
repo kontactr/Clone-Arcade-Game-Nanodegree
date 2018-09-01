@@ -100,63 +100,7 @@ var Engine = (function (global) {
     }
 
 
-    function checkCollisions() {
-
-        for (const enemy of allEnemies)
-
-        {
-
-            if (enemy.y === player.y) {
-
-
-                if (((player.x - enemy.x) >= 0 && (player.x - enemy.x) <= 55) ||
-                    ((enemy.x - player.x) >= 0 && (enemy.x - player.x) <= 55)
-
-                ) {
-
-
-
-                    if (player.life === 0) {
-
-
-                        console.log(enemy);
-                        player.x = 200;
-                        player.y = 410;
-                        player.playerVerticlePositionIndex = 0;
-                        player.plyerHorizontalPositionIndex = 2;
-                        scoreSpanNode.textContent = 0;
-                        bonusSpanNode.textContent = 0;
-                        player.score = 0;
-                        player.stars = 0;
-                        player.moves = 0;
-                        bounsObjects.flag = true;
-                        bounsObjects.starOccupied = false;
-                        bounsObjects.prevScore = -1;
-                        player.life = 3;
-                        lifeSpanNode.textContent = player.life;
-
-                    } else {
-                        console.log("Called", enemy);
-                        player.life -= 1;
-                        lifeSpanNode.textContent = player.life;
-                        player.x = 200;
-                        player.y = 410;
-                        player.playerVerticlePositionIndex = 0;
-                        player.plyerHorizontalPositionIndex = 2;
-
-
-                    }
-                    return;
-                }
-            }
-
-        }
-
-    }
-
-
-
-
+    
 
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
