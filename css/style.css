@@ -1,0 +1,133 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+canvas {
+    margin-left: auto;
+    margin-right: 10px;
+    order: 1;
+}
+
+img {
+    width: 101px;
+    max-height: 171px;
+    margin: auto;
+}
+
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 45px;
+    text-align: center;
+    align-items: center;
+    order: 2;
+}
+
+.toolbar-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+#character {
+    background-color: #050505;
+    height: 171px;
+    cursor: pointer;
+    background-image: url("../images/selector.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#gems {
+    background-color: #2d4262;
+    height: 171px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#score {
+    display: flex;
+    background-color: #c60000;
+    height: 110px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+span {
+    overflow-x: scroll;
+    
+    width: calc(100% / 2);
+    min-height: 110px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#life {
+    background-color: #805a3b;
+    height: 110px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+#buy-life {
+    width: 47px;
+    height: 47px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#buy-life-span {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 200px) and (max-width: 615px) {
+    canvas {
+        margin: auto;
+    }
+    #toolbar {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .toolbar-items {
+        width: (100% / 4);
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 616px) and (max-width: 740px) {
+    canvas {
+        margin: auto;
+    }
+    #toolbar {
+        width: 505px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .toolbar-items {
+        width: (100% / 2);
+        margin: auto;
+    }
+}
